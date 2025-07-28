@@ -187,7 +187,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #282828;
+	color: #2598eb;
 	font-family: 'Montserrat';
 	font-weight: 700;
 	margin: 0 0 28px;
@@ -211,7 +211,9 @@ h3 {
 
 .h4,
 h4 {
-	font-size: 32px;
+	font-size: px;
+	font-weight: 600;
+	color: white;
 }
 
 .h5,
@@ -2977,6 +2979,7 @@ table tbody tr td {
 	padding: 0;
 }
 
+
 .header .navbar.navbar-bordered {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -3026,7 +3029,7 @@ table tbody tr td {
 	top: 22px;
 	left: 0;
 	margin: auto;
-	width: 0;
+	width: 1080;
 	height: 3px;
 	background: #2598eb;
 	content: '';
@@ -3075,12 +3078,14 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 .header-full .navbar {
 	min-height: 60px;
 	padding-left: 25px;
+
 }
 
 .header-full .navbar-nav>li>a,
 .header-full .module .module-icon {
 	line-height: 60px;
 }
+
 
 .header-full .module-consultation .btn {
 	margin: 0;
