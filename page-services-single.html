@@ -44,7 +44,8 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
 <body>
     <div class="preloader">
         <div class="reverse-spinner"></div>
-    </div><!-- Document Wrapper
+    </div>
+    <!-- Document Wrapper
 	============================================= -->
     <div id="wrapper" class="wrapper clearfix">
         <header id="navbar-spy" class="header header-1 header-transparent">
@@ -134,27 +135,57 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
 
         <!-- Services #2
 ============================================= -->
-        <section id=" services-single" class="services services-single">
+        <section id="services-single" class="services services-single">
             <div class="container">
                 <div class="row">
+                    <!-- Left menu -->
                     <div class="col-sm-12 col-md-12 col-lg-3">
-                        <!-- Categories
-============================================= -->
+                        <!-- Categories -->
                         <div class="widget widget-categories">
                             <div class="widget-content">
-                                <ul class="list-unstyled">
-                                    <li class="active"><a href="#">Core Services</a></li>
-                                    <li><a href="#">Internal Audits</a></li>
-                                    <li><a href="#">Supplier Audits</a></li>
-                                    <li><a href="#">Ex Equipment & Regulatory Audits</a></li>
-                                    <li><a href="#">Audit Support for Certification Bodies</a></li>
-                                    <li><a href="#">Custom Audit Programs</a></li>
+                                <ul class="nav flex-column nav-pills" id="serviceTabs" role="tablist"
+                                    aria-orientation="vertical">
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="overview-tab" data-toggle="pill" href="#overview"
+                                            role="tab" aria-controls="overview" aria-selected="false">
+                                            Core Services
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="internal-tab" data-toggle="pill" href="#internal"
+                                            role="tab" aria-controls="internal" aria-selected="true">
+                                            Internal Audits
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="supplier-tab" data-toggle="pill" href="#supplier"
+                                            role="tab" aria-controls="supplier" aria-selected="false">
+                                            Supplier Audits
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="equipment-tab" data-toggle="pill" href="#equipment"
+                                            role="tab" aria-controls="equipment" aria-selected="false">
+                                            Ex Equipment &amp; Regulatory Audits
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="support-tab" data-toggle="pill" href="#support"
+                                            role="tab" aria-controls="support" aria-selected="false">
+                                            Audit Support for Certification Bodies
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="custom-tab" data-toggle="pill" href="#custom" role="tab"
+                                            aria-controls="custom" aria-selected="false">
+                                            Custom Audit Programs
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <!-- Info
-============================================= -->
+                        <!-- Info / Brochure -->
                         <div class="widget widget-info">
                             <div class="widget--content">
                                 <div class="info--title pull-left">
@@ -164,424 +195,252 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                                     <img src="assets/images/icons/pdficon.jpg" alt="icon">
                                 </div>
                             </div>
-                        </div> <!-- .widget-info end -->
-                    </div><!-- .col-lg-3 end -->
+                        </div>
+                    </div>
+                    <!-- .col-lg-3 end -->
+
+                    <!-- Right content -->
                     <div class="col-sm-12 col-md-12 col-lg-9">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="services--text">
-                                    <h3>Overview</h3>
-                                    <p>At Global Audit, we provide independent, reliable,
-                                        and efficient audit services across industries and
-                                        geographies.
-                                        Whether you need to ensure compliance, strengthen your
-                                        quality systems,
-                                        or meet cleitn and regulatory requirements, our global
-                                        network of expert
-                                        auditors
-                                        is ready to support you – wherever and whenever you need
-                                        them.</p>
-
-                                </div>
-                                <!-- .services-text end -->
-                            </div>
-                            <!-- .col-lg-12 end -->
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="tab-content">
+                                    <!-- Optional Overview / Core Services -->
+                                    <div class="tab-pane fade" id="overview" role="tabpanel"
+                                        aria-labelledby="overview-tab">
                                         <div class="services--text">
+                                            <h3>Core Services</h3>
+                                            <p>At Global Audit, we provide independent, reliable, and efficient audit
+                                                services across
+                                                industries and geographies. Whether you need to ensure compliance,
+                                                strengthen your quality
+                                                systems, or meet client and regulatory requirements, our global network
+                                                of expert auditors is
+                                                ready to support you – wherever and whenever you need them.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Internal Audits -->
+                                    <div class="tab-pane fade show active" id="internal" role="tabpanel"
+                                        aria-labelledby="internal-tab">
+                                        <div class="services--text">
+                                            <!-- Imagen de la sección -->
+                                            <img src="assets/images/services/internal-audits.jpg" alt="Internal Audits"
+                                                class="img-fluid mb-3">
                                             <h3>Internal Audits</h3>
-                                            <p>Ensure your management systemis working – not just documented.
-                                                We conduct audits aligned with ISO 9001 and other standards,
-                                                identifying both nonconformities and opportunities for improvement.
-                                                Ideal for organzizations seeking certification readiness, gap analysis,
-                                                or ongoing improvement.
-                                            </p>
-                                            <h4>Includes</h4>
-                                            <p> • ISO 9001 Internal Audits <br>
-                                                • ISO/IEC 17020 Internal Audits <br>
-                                                • Customized Audit Programs <br>
-                                                • Remote or On-Site Execution <br> </p>
+                                            <p>Ensure your management system is working – not just documented. We
+                                                conduct audits aligned with
+                                                ISO 9001 and other standards, identifying both nonconformities and
+                                                opportunities for improvement.
+                                                Ideal for organizations seeking certification readiness, gap analysis,
+                                                or ongoing improvement.</p>
+                                            <h4>Includes:</h4>
+                                            <ul>
+                                                <li>ISO 9001 Internal Audits</li>
+                                                <li>ISO/IEC 17020 Internal Audits</li>
+                                                <li>Customized Audit Programs</li>
+                                                <li>Remote or On-Site Execution</li>
+                                            </ul>
                                         </div>
-                                        <!-- .services-text end -->
                                     </div>
-                                    <!-- .col-lg-6 end -->
+
+                                    <!-- Supplier Audits -->
+                                    <div class="tab-pane fade" id="supplier" role="tabpanel"
+                                        aria-labelledby="supplier-tab">
+                                        <div class="services--text">
+                                            <h3>Supplier Audits</h3>
+                                            <p><strong>Trust your supply chain before it’s too late.</strong> We
+                                                evaluate suppliers, contractors,
+                                                and outsourced processes to help you reduce risk and ensure quality
+                                                across the value chain. Global
+                                                reach with local auditors.</p>
+                                            <h4>Use cases:</h4>
+                                            <ul>
+                                                <li>Pre-qualification</li>
+                                                <li>Periodic evaluations</li>
+                                                <li>Critical supplier assessments</li>
+                                                <li>CSR / ESG / EHS / Quality audits</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Ex Equipment & Regulatory Audits -->
+                                    <div class="tab-pane fade" id="equipment" role="tabpanel"
+                                        aria-labelledby="equipment-tab">
+                                        <div class="services--text">
+                                            <h3>Ex Equipment &amp; Regulatory Audits</h3>
+                                            <p><strong>Certified expertise in Ex and regulatory compliance.</strong> Our
+                                                specialized auditors support
+                                                Certification Bodies, Manufacturers, and Service Providers seeking ATEX,
+                                                IECEx, INMETRO, UKCA Ex, and
+                                                US NRTL compliance. We help you meet the requirements for ISO/IEC
+                                                80079-34 and beyond.</p>
+                                            <h4>Applicable to:</h4>
+                                            <ul>
+                                                <li>Hazardous location equipment audits</li>
+                                                <li>FM/ATEX/IECEx readiness</li>
+                                                <li>Quality system (QAN/QAR) audits for notified body schemes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Support for Certification Bodies -->
+                                    <div class="tab-pane fade" id="support" role="tabpanel"
+                                        aria-labelledby="support-tab">
+                                        <div class="services--text">
+                                            <h3>Audit Support for Certification Bodies</h3>
+                                            <p><strong>Expand your audit capacity with a trusted global
+                                                    partner.</strong> We support Certification
+                                                Bodies (CBs) across product and management system certification schemes.
+                                                Our qualified auditors act
+                                                as your local eyes and ears, ensuring consistent, impartial, and
+                                                technically competent audit delivery
+                                                – under your brand or ours.</p>
+                                            <h4>We support CBs with:</h4>
+                                            <ul>
+                                                <li>ISO/IEC 17020, 17021-1, 17065-based schemes</li>
+                                                <li>ATEX, IECEx, NRTL, INMETRO, UKCA Ex</li>
+                                                <li>Internal audits, witness audits, or subcontracted audits</li>
+                                                <li>Global coverage across the Americas, Europe, and Asia-Pacific</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Custom Audit Programs -->
+                                    <div class="tab-pane fade" id="custom" role="tabpanel" aria-labelledby="custom-tab">
+                                        <div class="services--text">
+                                            <h3>Custom Audit Programs</h3>
+                                            <p><strong>You define the need. We build the solution.</strong> From
+                                                multi-site programs to multi-standards
+                                                audits, we adapt to your operational context. Whether you operate in
+                                                North America, LATAM, Europe, or
+                                                Asia, we can deliver consistent, scalable audit solutions.</p>
+                                        </div>
+                                    </div>
 
                                 </div>
-                                <!-- .col-lg-6 end -->
+                                <!-- .tab-content end -->
                             </div>
-                            <!-- .row end -->
                         </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-12 mb-45">
-                            <div class="video--content text-center">
-                                <div class="bg-section">
-                                    <img src="assets/images/video/1.jpg" alt="Background" />
-                                </div>
-                                <div class="video--button">
-                                    <div class="video-overlay">
-                                        <div class="pos-vertical-center">
-                                            <a class="popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
-                                                <span class="btn--animation"></span>
-                                                <i class="fa fa-play"></i>
-                                            </a>
-                                        </div>
-                                        <!-- .video-player end -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .video-content end -->
-                        </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4">
-                                    <div class="how-to-panel">
-                                        <h3>Creative Solutions</h3>
-                                        <p>We will go ahead that extra mile to ensure our
-                                            clients welfare, our
-                                            working hours convenient to our Client's needs.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- .col-md-4 end -->
-                                <div class="col-xs-12 col-sm-4 col-md-4">
-                                    <div class="how-to-panel">
-                                        <h3>Professional Team</h3>
-                                        <p>We have the most famous experts in reputable
-                                            company providing great
-                                            advice on Wills, Lasting Power of Attorney and
-                                            Debt Solut.</p>
-                                    </div>
-                                </div>
-                                <!-- .col-md-4 end -->
-                                <div class="col-xs-12 col-sm-4 col-md-4">
-                                    <div class="how-to-panel">
-                                        <h3>Diverse Approach</h3>
-                                        <p>We don’t believe in the sales culture, but
-                                            instead we believe in the
-                                            service culture. Yes, time is precious, but we
-                                            make the right decision.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- .col-md-4 end -->
-                            </div>
-                            <!-- .row end -->
-                        </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-12 mb-60">
-                            <div class="chart--img">
-                                <img src="assets/images/charts/2.png" alt="chart" class="img-fluid">
-                            </div>
-                            <!-- .chart-img end -->
-                        </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-md-12">
-                            <div class="services--text mb-25">
-                                <h3>Key Benifits</h3>
-                            </div>
-                            <div class="accordion accordion-1 mb-60" id="accordion01">
-                                <!-- Panel 01 -->
-                                <div class="card">
-                                    <div class="card-heading">
-                                        <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                            href="#collapse01-1">Which Plan Is Right For
-                                            Me?</a>
-                                    </div>
-                                    <div id="collapse01-1" class="collapse" data-parent="#accordion01">
-                                        <div class="card-body">Trends, vision dominates a
-                                            lot of our subconscious
-                                            interpretation of the world around us. On top
-                                            it, pleasing images create
-                                            a better user experience. Rounding up a bunch of
-                                            specific
-                                            designs.Trends, vision dominates a lot of our
-                                            subconscious
-                                            interpretation of the world around us. </div>
-                                    </div>
-                                </div>
-                                <!-- Panel 02 -->
-                                <div class="card">
-                                    <div class="card-heading">
-                                        <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01"
-                                            href="#collapse01-2">Do I have to commit to a
-                                            contract? </a>
-                                    </div>
-                                    <div id="collapse01-2" class="collapse" data-parent="#accordion01">
-                                        <div class="card-body">Trends, vision dominates a
-                                            lot of our subconscious
-                                            interpretation of the world around us. On top
-                                            it, pleasing images create
-                                            a better user experience. Rounding up a bunch of
-                                            specific
-                                            designs.Trends, vision dominates a lot of our
-                                            subconscious
-                                            interpretation of the world around us. </div>
-                                    </div>
-                                </div>
-                                <!-- Panel 03 -->
-                                <div class="card">
-                                    <div class="card-heading">
-                                        <a class="card-link" data-toggle="collapse" data-parent="#accordion01"
-                                            href="#collapse01-3">What Payment Methods Are
-                                            Available? </a>
-                                    </div>
-                                    <div id="collapse01-3" class="collapse show" data-parent="#accordion01">
-                                        <div class="card-body">With any financial product
-                                            that you buy, it is
-                                            important that you know you are getting the best
-                                            advice from a reputable
-                                            company as often you will have to provide
-                                            sensitive information online
-                                            or over the internet.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End .Accordion-->
-                        </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <div class="services--text">
-                                <h3>Case Studies</h3>
-                            </div>
-                            <!-- .services-text end -->
-                        </div>
-                        <!-- .col-lg-12 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-12 case case-standard">
-                            <div class="carousel owl-carousel carousel-dots" data-slide="3" data-slide-rs="1"
-                                data-autoplay="true" data-nav="false" data-dots="true" data-space="10" data-loop="true"
-                                data-speed="800">
-                                <!-- Case #1 -->
-                                <div class="case-item">
-                                    <div class="case-item-container">
-                                        <div class="case--img">
-                                            <img src="assets/images/case/3col/1.jpg" alt="case Item">
-                                            <div class="case--hover">
-                                                <div class="case--action">
-                                                    <a href="#" title="case Item"></a>
-                                                </div>
-                                                <!-- .case-action end -->
-                                            </div>
-                                            <!-- .case-hover end -->
-                                        </div>
-                                        <!-- .case-img end -->
-                                        <div class="case--content">
-                                            <div class="case--cat">
-                                                <a href="#">Business Tips</a><a href="#">Consulting</a>
-                                            </div>
-                                            <div class="case--title">
-                                                <h4><a href="#">Grow your business with an
-                                                        unexpected niche!</a>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- . case-item end -->
-                                <!-- Case #2 -->
-                                <div class="case-item">
-                                    <div class="case-item-container">
-                                        <div class="case--img">
-                                            <img src="assets/images/case/3col/2.jpg" alt="case Item">
-                                            <div class="case--hover">
-                                                <div class="case--action">
-                                                    <a href="#" title="case Item"></a>
-                                                </div>
-                                                <!-- .case-action end -->
-                                            </div>
-                                            <!-- .case-hover end -->
-                                        </div>
-                                        <!-- .case-img end -->
-                                        <div class="case--content">
-                                            <div class="case--cat">
-                                                <a href="#">Investment</a><a href="#">Tips</a>
-                                            </div>
-                                            <div class="case--title">
-                                                <h4><a href="#">Use credit reporting to
-                                                        improve client
-                                                        relationships.</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- . case-item end -->
-                                <!-- Case #3 -->
-                                <div class="case-item">
-                                    <div class="case-item-container">
-                                        <div class="case--img">
-                                            <img src="assets/images/case/3col/3.jpg" alt="case Item">
-                                            <div class="case--hover">
-                                                <div class="case--action">
-                                                    <a href="#" title="case Item"></a>
-                                                </div>
-                                                <!-- .case-action end -->
-                                            </div>
-                                            <!-- .case-hover end -->
-                                        </div>
-                                        <!-- .case-img end -->
-                                        <div class="case--content">
-                                            <div class="case--cat">
-                                                <a href="#">Customer Service</a><a href="#">Consulting</a>
-                                            </div>
-                                            <div class="case--title">
-                                                <h4><a href="#">State stamp duty surcharges
-                                                        for foreign buyers.</a>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- . case-item end -->
-                                <!-- Case #4 -->
-                                <div class="case-item">
-                                    <div class="case-item-container">
-                                        <div class="case--img">
-                                            <img src="assets/images/case/3col/4.jpg" alt="case Item">
-                                            <div class="case--hover">
-                                                <div class="case--action">
-                                                    <a href="#" title="case Item"></a>
-                                                </div>
-                                                <!-- .case-action end -->
-                                            </div>
-                                            <!-- .case-hover end -->
-                                        </div>
-                                        <!-- .case-img end -->
-                                        <div class="case--content">
-                                            <div class="case--cat">
-                                                <a href="#">Environment </a>
-                                            </div>
-                                            <div class="case--title">
-                                                <h4><a href="#">Government changes on
-                                                        transfer of land or duty. </a>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- . case-item end -->
-                            </div>
-                            <!-- .row end -->
-                        </div>
-                        <!-- #case end -->
+
+                        <!-- Rest of existing content continues below (video, panels, etc.) -->
                     </div>
+                    <!-- .col-lg-9 end -->
                 </div>
-                <!-- .col-lg-9 end -->
+                <!-- .row end -->
             </div>
-            <!-- .row end -->
-    </div>
-    <!-- .container end -->
-    </section>
-    <!-- #services-single end -->
+            <!-- .container end -->
+        </section>
 
 
 
-    <!-- CTA #1
+
+        <!-- CTA #1
 ============================================= -->
-    <section id="cta1" class="cta cta-1 bg-theme">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-9">
-                    <h3>Ready to Get Started? </h3>
-                    <h4>Start a conversation with our team today. Let us know your needs – and we’ll handle the rest.
-                    </h4>
-                </div>
-                <!-- .col-md-9 -->
-                <div class="col-xs-12 col-sm-12 col-md-3 text-center">
-                    <a href="#" class="btn btn--white btn--bordered btn--rounded">Request and Audit</a>
-                </div>
-                <!-- .col-md-3 -->
-            </div>
-            <!-- .row -->
-        </div>
-        <!-- .container -->
-    </section>
-    <!-- #cta1 end -->
-
-    <!-- Footer #1
-============================================= -->
-    <footer id="footer" class="footer footer-1">
-        <!-- Widget Section
-	============================================= -->
-        <div class="footer-widget">
+        <section id="cta1" class="cta cta-1 bg-theme">
             <div class="container">
-                <div class="row clearfix">
-                    <div class="col-12 col-md-6 col-lg-3 footer--widget widget-about">
-                        <div class="widget-content">
-                            <img class="footer-logo" src="assets/images/logo/logo-small.png" alt="logo">
-                            <p>Global Audit delivers reliable, independent audits whenever and wherever you need
-                                them.
-                                Powered by technology. Built on trust. </p>
-                            <div class="social-icons">
-                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- .col-md-3 end -->
-                    <div class="col-12 col-xs-4 col-md-6 col-lg-2 footer--widget widget-links">
-                        <div class="widget-title">
-                            <h5>Company</h5>
-                        </div>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- .col-md-2 end -->
-
-                    <div class="col-12 col-sm-4 col-md-6 col-lg-2 footer--widget widget-links">
-                        <div class="widget-title">
-                            <h5>Services</h5>
-                        </div>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="#">Internal Audits</a></li>
-                                <li><a href="#">Supplier Audits</a></li>
-                                <li><a href="#">Ex & Regulatory Audits</a></li>
-                                <li><a href="#">Audit Support for CBs</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- .col-md-4 end -->
-
-                    <div class="col-12 col-lg-4 col-md-6 col-lg-2 footer--widget widget-links">
-                        <div class="widget-title">
-                            <h5>Quality & Compliance</h5>
-                        </div>
-                        <div class="widget-content">
-                            <ul>
-                                <li><a href="#">Confidentiality & Impartiality Policy</a></li>
-                                <li><a href="#">Complaints & Appeals Process</a></li>
-                                <li><a href="#">Terms [of use]</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-
-                    </div><!-- .container end -->
-                </div><!-- .footer-widget end -->
-
-                <!-- Copyrights
-	============================================= -->
-                <div class="footer--bar">
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-md-12 text--center footer--copyright">
-                            <div class="copyright">
-                                <span>©2025 Global Audit International, LLC | All right reserved Texas, USA |
-                                    <a href="contact@globalaudit.com">contact@globalaudit.com</a>
-                                </span> </a>
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-9">
+                        <h3>Ready to Get Started? </h3>
+                        <h4>Start a conversation with our team today. Let us know your needs – and we’ll handle the
+                            rest.
+                        </h4>
                     </div>
-                    <!-- .row end -->
-                </div><!-- .footer-copyright end -->
-    </footer>
+                    <!-- .col-md-9 -->
+                    <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+                        <a href="#" class="btn btn--white btn--bordered btn--rounded">Request and Audit</a>
+                    </div>
+                    <!-- .col-md-3 -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+        <!-- #cta1 end -->
+
+        <!-- Footer #1
+============================================= -->
+        <footer id="footer" class="footer footer-1">
+            <!-- Widget Section
+	============================================= -->
+            <div class="footer-widget">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-12 col-md-6 col-lg-3 footer--widget widget-about">
+                            <div class="widget-content">
+                                <img class="footer-logo" src="assets/images/logo/logo-small.png" alt="logo">
+                                <p>Global Audit delivers reliable, independent audits whenever and wherever you need
+                                    them.
+                                    Powered by technology. Built on trust. </p>
+                                <div class="social-icons">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- .col-md-3 end -->
+                        <div class="col-12 col-xs-4 col-md-6 col-lg-2 footer--widget widget-links">
+                            <div class="widget-title">
+                                <h5>Company</h5>
+                            </div>
+                            <div class="widget-content">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col-md-2 end -->
+
+                        <div class="col-12 col-sm-4 col-md-6 col-lg-2 footer--widget widget-links">
+                            <div class="widget-title">
+                                <h5>Services</h5>
+                            </div>
+                            <div class="widget-content">
+                                <ul>
+                                    <li><a href="#">Internal Audits</a></li>
+                                    <li><a href="#">Supplier Audits</a></li>
+                                    <li><a href="#">Ex & Regulatory Audits</a></li>
+                                    <li><a href="#">Audit Support for CBs</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col-md-4 end -->
+
+                        <div class="col-12 col-lg-4 col-md-6 col-lg-2 footer--widget widget-links">
+                            <div class="widget-title">
+                                <h5>Quality & Compliance</h5>
+                            </div>
+                            <div class="widget-content">
+                                <ul>
+                                    <li><a href="#">Confidentiality & Impartiality Policy</a></li>
+                                    <li><a href="#">Complaints & Appeals Process</a></li>
+                                    <li><a href="#">Terms [of use]</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+
+                        </div><!-- .container end -->
+                    </div><!-- .footer-widget end -->
+
+                    <!-- Copyrights
+	============================================= -->
+                    <div class="footer--bar">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-md-12 text--center footer--copyright">
+                                <div class="copyright">
+                                    <span>©2025 Global Audit International, LLC | All right reserved Texas, USA |
+                                        <a href="contact@globalaudit.com">contact@globalaudit.com</a>
+                                    </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .row end -->
+                    </div><!-- .footer-copyright end -->
+        </footer>
 
 
-    <div id="back-to-top" class="backtop"><i class="fa fa-long-arrow-up"></i></div>
+        <div id="back-to-top" class="backtop"><i class="fa fa-long-arrow-up"></i></div>
     </div><!-- #wrapper end -->
 
     <!-- Footer Scripts
