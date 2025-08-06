@@ -12011,6 +12011,31 @@ footer .widget-instagram .insta-hover i {
 	font-weight: 700;
 }
 
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.header {
+	background-color: rgba(0, 0, 0, 0.8);
+	/* Black with 50% opacity */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.header {
+	transition: background-color 0.3s ease;
+}
+
+body {
+	padding-top: 60px;
+	/* Match navbar height */
+}
+
 .btn,
 .btn--white,
 .btn--bordered,
