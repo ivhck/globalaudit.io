@@ -12019,7 +12019,7 @@ footer .widget-instagram .insta-hover i {
 }
 
 .header {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 1.0);
 	/* Black with 50% opacity */
 	position: fixed;
 	top: 0;
@@ -12032,7 +12032,7 @@ footer .widget-instagram .insta-hover i {
 }
 
 body {
-	padding-top: 60px;
+	padding-top: 100px;
 	/* Match navbar height */
 }
 
