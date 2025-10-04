@@ -2,6 +2,7 @@
 <html dir="ltr" lang="en-US">
 
 <head>
+
     <!--DEVELOPED BY RADICAL-SQUAD
             _____________             ______                                 _________
  _____________ ______  /__(_)___________ ___  /     _____________ ____  _______ ______  /
@@ -10,26 +11,55 @@
  /_/    \__,_/ \__,_/  /_/  \___/ \__,_/ /_/        /____/ \__, / \__,_/ \__,_/ \__,_/   
                                                           /_/  www.radical-squad.com -->
     <!-- Document Meta ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Global Audit GApp Platform">
+    <link href="assets/images/favicon/favicon.png" rel="icon">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Global Audit GApp Platform">
-        <link href="assets/images/favicon/favicon.png" rel="icon">
+    <link
+        href="http://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800%7CRoboto:300i,400,400i,500,500i,700"
+        rel="stylesheet" type="text/css">
+    <link href="assets/css/external.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-        <link
-            href="http://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800%7CRoboto:300i,400,400i,500,500i,700"
-            rel="stylesheet" type="text/css">
-        <link href="assets/css/external.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
+    <title>GApp™ | Global Audit</title>
 
-        <title>GApp™ | Global Audit</title>
-    </head>
+    <style>
+        .hero-gapp {
+            /* Use a placeholder image path. Change this to your actual image! */
+            background-image: url('assets/images/page-titles/2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 120px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-gapp::before {
+            /* Dark overlay for text readability */
+            content: "";
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-gapp .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ensure the text is visible and styled for the hero */
+        .hero-gapp h1,
+        .hero-gapp p {
+            color: #fff;
+        }
+    </style>
+</head>
 
 <body>
-    <!-- Document Wrapper
-	============================================= -->
     <div id="wrapper" class="wrapper clearfix">
         <header id="navbar-spy" class="header header-1 header-transparent">
             <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light navbar-bordered">
@@ -43,35 +73,26 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav ml-auto">
-                            <!-- Home Menu-->
                             <li class="has-dropdown">
                                 <a href="index.html">Home</a>
                             </li>
-                            <!-- li end -->
-
-                            <!-- Services Menu -->
                             <li class="has-dropdown">
                                 <a href="page-services-single.html">Services</a>
 
                             </li>
 
-                            <!-- Auditors Menu-->
                             <li class="has-dropdown">
                                 <a href="auditors.html">Auditors</a>
                             </li>
 
-                            <!-- GApp Menu-->
                             <li class="has-dropdown active">
                                 <a href="GApp.html">GApp</a>
 
-                                <!-- AuditorU Menu-->
                             <li class="has-dropdown">
                                 <a href="AuditorU™ .html">AuditorU™ </a>
 
-                                <!-- About Us Menu-->
                             <li class="has-dropdown">
                                 <a href="aboutus.html">About Us</a>
 
@@ -81,8 +102,19 @@
                     </div>
         </header>
 
-        <!-- Main Content Section -->
-
+        <section class="hero-gapp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                        <div class="title text-center">
+                            <div class="title--heading">
+                                <h1 class="mb-20">Audit Coordination. Simplified.</h1>
+                                <p class="lead">The Platform built for speed, transparency, and trust.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="gapp-intro" class="pt-160 pb-80">
             <div class="container">
@@ -138,7 +170,6 @@
     </div>
     </section>
 
-    <!-- Footer -->
     <footer id="footer" class="footer footer-1">
         <div class="footer-widget">
             <div class="container">
