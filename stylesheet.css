@@ -1,0 +1,834 @@
+/* CSS to match Mock Up.jpeg and design cues */
+:root {
+    /* Dark theme variables */
+    --color-off-white: #0a0a0a;
+    /* dark section background */
+    --color-charcoal: #e6e6e6;
+    /* light-gray text for secondary elements */
+    --color-graphite: #ffffff;
+    /* primary text color */
+    --color-accent-blue: #007aff;
+    /* call-to-action blue */
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Layout container used across sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Global Styles & Typography (Clean san-serif like SF Pro/Avenir)  */
+body {
+    font-family: var(--font-stack);
+    color: var(--color-graphite);
+    margin: 0;
+    background-color: #000000;
+    /* dark page background */
+    /* Base background */
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    /* Tight letter spacing for modern feel */
+    font-size: 17px;
+}
+
+.section {
+    padding: 80px 0;
+    /* Spacious layout [cite: 4] */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+/* Utility for Off-White Background  */
+.bg-off-white {
+    background-color: var(--color-off-white);
+}
+
+/* --- Header/Navigation --- */
+header {
+    background-color: #000000;
+    /* keep header dark */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* space between image and text */
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-graphite);
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    max-height: 70px;
+    /* adjust as needed for your logo file */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 4px 0;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--color-accent-blue);
+}
+
+.cta-button.secondary {
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    transition: all 0.2s;
+}
+
+.cta-button.secondary:hover {
+    color: var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+}
+
+.nav-toggle {
+    display: none;
+    /* Hide on desktop */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Skip link (visually hidden until focused) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 10000;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* --- Buttons (Call-to-Action) --- */
+.cta-button {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.2s, opacity 0.2s;
+    margin-right: 12px;
+    font-size: 17px;
+}
+
+.cta-button.primary {
+    /* Primary CTA: blue button in dark mode */
+    background-color: var(--color-accent-blue);
+    color: white;
+    border: 1px solid var(--color-accent-blue);
+}
+
+.cta-button.primary:hover {
+    opacity: 0.9;
+}
+
+.cta-button.subtle {
+    background-color: transparent;
+    color: var(--color-charcoal);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-button.subtle:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Specific white-outline style for the Request an Audit CTA */
+.btn-request-outline {
+    border: 2px solid #ffffff;
+    /* stronger white outline */
+    color: #ffffff;
+    /* ensure text reads white on dark background */
+    background: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.03);
+    /* subtle halo */
+}
+
+.btn-request-outline:hover {
+    border-color: var(--color-accent-blue);
+    color: var(--color-accent-blue);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.btn-request-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.18), 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button.network {
+    background-color: var(--color-accent-blue);
+    color: white;
+    border: 1px solid var(--color-accent-blue);
+}
+
+.cta-button.network:hover {
+    opacity: 0.9;
+}
+
+/* --- Home Section --- */
+#home .section {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#home .headline {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.05;
+    max-width: 600px;
+}
+
+#home .sub-headline {
+    font-size: 24px;
+    max-width: 500px;
+    margin-bottom: 40px;
+    color: var(--color-charcoal);
+}
+
+/* --- Services Section --- */
+#services .intro {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.core-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Rounded square cards for Core Services */
+.service-item {
+    background: rgba(255, 255, 255, 0.03);
+    /* slight lift from pure black background */
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 220px;
+}
+
+.service-item:hover,
+.service-item:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.55);
+}
+
+/* Make cards visually square on wider screens while remaining responsive */
+@media (min-width: 900px) {
+    .service-item {
+        aspect-ratio: 1 / 1;
+        min-height: 0;
+        padding: 20px;
+    }
+}
+
+/* Slightly stronger inner fill for contrast when nested text uses var(--color-charcoal) */
+.service-item p {
+    color: var(--color-charcoal);
+}
+
+/* Contact / Request Audit: place form on the right, info on the left */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 420px);
+    gap: 32px;
+    align-items: start;
+}
+
+/* Make the whole Request / Contact section appear as a white card with black text */
+#contact {
+    background: #ffffff;
+    color: #0b0b0b;
+    border-radius: 12px;
+    padding: 28px 18px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.25);
+}
+
+#contact .contact-grid {
+    background: transparent;
+    gap: 28px;
+}
+
+#contact .contact-info {
+    color: #0b0b0b;
+}
+
+.contact-form-wrapper .contact-form label {
+    display: block;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* Ensure default contact-info inherits color unless scoped (so #contact can set black) */
+.contact-info {
+    color: inherit;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+}
+
+.contact-quick {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+}
+
+.contact-quick li {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Thank you state for contact form: hidden until submission succeeds */
+#thankyou {
+    display: none;
+}
+
+.thankyou.visible,
+#thankyou.visible {
+    display: block;
+}
+
+#thankyou {
+    background: #ffffff;
+    color: #0b0b0b;
+    border-radius: 12px;
+    padding: 28px 18px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.18);
+}
+
+.contact-form-wrapper .contact-form label {
+    display: block;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
+    color: white;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 110px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.btn-primary {
+    background: var(--color-accent-blue);
+    color: white;
+    border: 1px solid var(--color-accent-blue);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.service-item h3 {
+    color: var(--color-accent-blue);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.service-item p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-charcoal);
+}
+
+/* --- GAppTM and AuditorUTM Sections (Look like the Mock Up) --- */
+.promo-section {
+    padding: 60px 0;
+}
+
+.promo-section h2 {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--color-graphite);
+    margin-bottom: 12px;
+}
+
+.promo-section p.intro {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: var(--color-charcoal);
+}
+
+.promo-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--color-accent-blue);
+    padding-left: 12px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    /* Two columns for features like in the mockup */
+    column-gap: 40px;
+    max-width: 600px;
+}
+
+.feature-list li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+.feature-list li::before {
+    content: '•';
+    color: var(--color-accent-blue);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- Footer --- */
+/* --- Footer --- */
+footer {
+    background-color: var(--color-accent-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 20px 20px;
+    color: white;
+}
+
+/* Override default link colors in footer */
+footer a,
+footer a:visited {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+.footer-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--color-graphite);
+}
+
+.footer-logo {
+    display: block;
+    max-height: 40px;
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.social-icons a {
+    color: var(--color-charcoal);
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* visible focus style for footer links */
+footer a:focus {
+    outline: 3px solid rgba(0, 122, 255, 0.25);
+    outline-offset: 2px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: var(--color-charcoal);
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-accent-blue);
+}
+
+.footer-bottom {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 20px;
+    font-size: 13px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* Compatibility: support the footer markup used in `index.html` (footer-widget / container / row / col.footer--widget)
+   This ensures the existing HTML receives the intended footer styles even if class names differ.
+*/
+.footer-widget .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-widget .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.footer-widget .col.footer--widget h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-widget .col.footer--widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-widget .col.footer--widget ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-widget .col.footer--widget ul li a:hover {
+    color: var(--color-accent-blue);
+    text-decoration: underline;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 1024px) {
+    #home .headline {
+        font-size: 60px;
+    }
+}
+
+/* Footer responsiveness */
+@media (max-width: 900px) {
+    .footer-widget .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-widget .row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        padding-top: 12px;
+    }
+}
+
+/* Mobile friendly buttons and tap targets */
+@media (max-width: 600px) {
+    .cta-button {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-link,
+    .cta-button.secondary {
+        margin: 12px 20px;
+    }
+
+    .logo img {
+        max-height: 48px;
+    }
+}
+
+/* Our Values grid/cards */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 18px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    min-height: 110px;
+}
+
+.value-card i {
+    font-size: 40px;
+    color: var(--color-accent-blue);
+}
+
+.value-card h4 {
+    margin: 0;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    .value-card {
+        min-height: 90px;
+        padding: 14px;
+    }
+
+    .value-card i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Mobile Nav */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        /* keep mobile nav dark */
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+        z-index: 2000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link,
+    .cta-button.secondary {
+        margin: 8px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Content */
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #home .headline {
+        font-size: 48px;
+    }
+
+    .core-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-section p.intro {
+        font-size: 18px;
+    }
+
+    .feature-list {
+        columns: 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Force dark-on-white styles inside the #contact area to override earlier generic rules */
+#contact .contact-form-wrapper {
+    background: #ffffff !important;
+}
+
+#contact .contact-form-wrapper .contact-form label {
+    color: #0b0b0b !important;
+}
+
+#contact .contact-form-wrapper .contact-form input[type="text"],
+#contact .contact-form-wrapper .contact-form input[type="email"],
+#contact .contact-form-wrapper .contact-form select,
+#contact .contact-form-wrapper .contact-form textarea {
+    background: #ffffff !important;
+    color: #0b0b0b !important;
+    border: 1px solid #dfe6eb !important;
+}
+
+#contact .contact-quick li {
+    color: rgba(11, 11, 11, 0.9) !important;
+}
