@@ -30,13 +30,13 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
             <a href="#home" class="logo"><img src="images/logo-light.png" alt="Global Audit logo"><span
                     class="visually-hidden">Global Audit</span></a>
             <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary Navigation">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#auditors" class="nav-link">Auditors</a>
-                <a href="#gapp" class="nav-link">GApp™</a>
-                <a href="#auditoru™" class="nav-link">AuditorU™</a>
-                <a href="#about" class="nav-link">About Us</a>
-                <a href="#auditors" class="cta-button secondary">Join Our Network</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="auditors.html" class="nav-link">Auditors</a>
+                <a href="gapp.html" class="nav-link">GApp™</a>
+                <a href="auditoru.html" class="nav-link">AuditorU™</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="auditors.html" class="cta-button secondary">Join Our Network</a>
             </nav>
             <button class="nav-toggle" onclick="toggleMenu()" aria-controls="navLinks" aria-expanded="false"
                 aria-label="Toggle navigation">&#9776;</button>
@@ -45,75 +45,31 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
 
     <main id="main" role="main">
         <section id="home" class="section">
-            <h1 class="headline">Your Audits. <br>Your Way.</h1>
-            <p class="sub-headline">Global Audit delivers reliable, independent audits whenever and wherever you need
-                them.
-                Powered by technology. Built on trust.</p>
-            <div class="cta-group">
-                <a href="#" class="cta-button primary">Book Call</a>
-                <a href="#" class="cta-button subtle btn-request-outline">Request an Audit</a>
-                <a href="#auditors" class="cta-button network">Join Our Auditor Network</a>
-            </div>
-        </section>
-
-        <section id="services" class="section bg-off-white">
-            <h2>Independent audits. <br>Delivered anywhere. <br>Trusted everywhere.</h2>
-            <p class="intro">At Global Audit, we provide independent, reliable, and efficient audit services across
-                industries and geographies. Whether you need to ensure compliance, strengthen your quality systems, or
-                meet
-                client and regulatory requirements, our global network of expert auditors is ready to support you –
-                wherever
-                and whenever you need them.</p>
-
-            <h3>Our Core Services</h3>
-            <div class="core-services-grid">
-                <div class="service-item">
-                    <h3>Internal Audits</h3>
-                    <p>Ensure your management system is working – not just documented. We conduct audits aligned with
-                        ISO
-                        9001 and other standards, identifying both nonconformities and opportunities for improvement.
-                    </p>
-                </div>
-                <div class="service-item">
-                    <h3>Supplier Audits</h3>
-                    <p>Trust your supply chain before it’s too late. We evaluate suppliers, contractors, and outsourced
-                        processes to help you reduce risk and ensure quality across the value chain. Global reach with
-                        local
-                        auditors.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Ex Equipment & Regulatory Audits</h3>
-                    <p>Certified expertise in Ex and regulatory compliance. Our specialized auditors support
-                        Certification
-                        Bodies, Manufacturers and Services Providers seeking ATEX, IECEx, INMETRO, UKCA Ex, and US NRTL
-                        compliance.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Custom Audit Programs</h3>
-                    <p>You define the need. We build the solution. From multi-site programs to multi-standards audits,
-                        we
-                        adapt to your operational context. We can deliver consistent, scalable audit solutions globally.
-                    </p>
+            <div class="container hero-content">
+                <h1 class="headline">Your Audits. <br>Your Way.</h1>
+                <p class="sub-headline">Global Audit delivers reliable, independent audits whenever and wherever you
+                    need
+                    them.
+                    Powered by technology. Built on trust.</p>
+                <div class="cta-group">
+                    <a href="#" class="cta-button primary">Book Call</a>
+                    <button id="openRequestModal" class="cta-button subtle btn-request-outline" aria-haspopup="dialog"
+                        aria-controls="requestModal">Request an Audit</button>
+                    <a href="#auditors" class="cta-button network">Join Our Auditor Network</a>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT / REQUEST AUDIT -->
-        <section id="contact" class="section contact">
-            <div class="container contact-grid">
-                <div class="contact-info">
-                    <h2>Request an Audit</h2>
+        <!-- Services moved to services.html -->
+
+        <!-- CONTACT / REQUEST AUDIT modal (form moved into modal) -->
+        <div id="requestModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal-overlay" data-close="true"></div>
+            <div class="modal-dialog" role="document" aria-labelledby="modalTitle">
+                <button class="modal-close" aria-label="Close request form">×</button>
+                <div class="modal-body">
+                    <h2 id="modalTitle">Request an Audit</h2>
                     <p>Tell us about your needs and we’ll recommend the right audit program and timeline.</p>
-
-                    <ul class="contact-quick">
-                        <li><strong>Email:</strong> contact@yourcompany.com</li>
-                        <li><strong>Phone:</strong> +1 (555) 123-4567</li>
-                        <li><strong>Locations:</strong> Global coverage — priority regions listed on request.</li>
-                    </ul>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <!-- Replace the `action` with your Formspree endpoint or your server endpoint -->
                     <form id="requestAuditForm" class="contact-form" method="POST"
                         action="https://formspree.io/f/{your-form-id}">
                         <label>
@@ -160,144 +116,22 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                         <input type="hidden" name="_subject" value="New Audit Request" />
                         <input type="hidden" name="_after" value="#thankyou" />
                     </form>
+                    <div id="thankyou" class="thankyou" aria-hidden="true">
+                        <h3>Thanks — we received your request</h3>
+                        <p>One of our team will review your request and be in touch within 48 hours. If this is urgent,
+                            please email <a href="mailto:contact@globalaudit.com">contact@globalaudit.com</a>.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="gapp" class="section promo-section">
-            <p style="font-size: 15px; color: var(--color-accent-blue); font-weight: 500;">GApp™</p>
-            <h2>Introducing GApp™: <br>Audit coordination, simplified.</h2>
-            <p class="intro">GApp™ is Global Audit’s upcoming audit coordination platform – designed to streamline
-                how
-                audits are requested, scheduled, assigned, and delivered. Built by auditors – for auditors.</p>
+        <!-- GApp content moved to gapp.html -->
 
-            <h3>What GApp™ Will Do</h3>
-            <ul class="feature-list">
-                <li>Smart audit matching</li>
-                <li>Document sharing</li>
-                <li>Live coordination</li>
-                <li>Real-time status visibility</li>
-            </ul>
-            <div style="margin-top: 40px;">
-                <a href="#" class="cta-button primary">Join the Waitlist</a>
-                <a href="#" class="cta-button subtle">Request a Demo Preview</a>
-            </div>
-        </section>
+        <!-- AuditorU content moved to auditoru.html -->
 
-        <section id="auditorutm" class="section promo-section bg-off-white">
-            <p style="font-size: 15px; color: var(--color-accent-blue); font-weight: 500;">AuditorU™</p>
-            <h2>AuditorU™ <br>Advancing your audit expertise</h2>
-            <p class="intro">AuditorU™ is Global Audit’s professional training and certification platform. Designed
-                to
-                develop, qualify, and maintain competent auditors around the world, it blends expert instruction and
-                real-world scenarios.</p>
+        <!-- Auditors content moved to auditors.html -->
 
-            <h3>Training Tracks (Rolling Out in Beta)</h3>
-            <ul class="feature-list">
-                <li>Internal Auditor Certification (ISO 9001:2015)</li>
-                <li>Supplier Auditor Program</li>
-                <li>ISO/IEC 17020 Audit Competency</li>
-                <li>Ex Equipment & Regulatory Readiness (Coming Soon)</li>
-            </ul>
-
-            <div style="margin-top: 40px;">
-                <a href="#" class="cta-button primary">Explore Courses</a>
-                <a href="#" class="cta-button subtle">Request CB Licensing Info</a>
-            </div>
-        </section>
-
-        <section id="auditors" class="section">
-            <h2>Join a global network of professionals transforming how audits are delivered.</h2>
-            <p class="intro">Global Audit is building a network of qualified, independent auditors to support
-                high-quality,
-                impartial audits around the world. We offer the flexibility, tools, and support you need to do
-                meaningful
-                work – on your terms.</p>
-
-            <h3>Why Join Our Network</h3>
-            <div class="core-services-grid">
-                <div class="service-item">
-                    <h3>Work from anywhere.</h3>
-                    <p>Choose the audits that match your expertise, location, and availability.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Expand your opportunities.</h3>
-                    <p>We work with Certification Bodies, Manufacturers, and Global Clients in need of reliable,
-                        independent
-                        audits.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Get access to GApp™.</h3>
-                    <p>Our audit coordination platform makes logistics, planning, and reporting simpler than ever.
-                    </p>
-                </div>
-                <div class="service-item">
-                    <h3>Be part of something bigger.</h3>
-                    <p>We’re building a modern, trusted audit system – and you’re invited.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 60px;">
-                <a href="#" class="cta-button network">Join Our Auditor Network</a>
-                <p style="font-size: 15px; margin-top: 20px;">Not Yet Qualified? Start with <a href="#auditoru™"
-                        style="color: var(--color-accent-blue); text-decoration: none;">AuditorU™</a>.</p>
-            </div>
-        </section>
-
-        <section id="about" class="section bg-off-white">
-            <h2>We exist to make audits better – for everyone.</h2>
-            <p class="intro">Global Audit is a modern audit delivery company – independent, reliable, and ready to
-                meet
-                the
-                evolving demands of global compliance. We operate through a growing network of experienced auditors
-                and
-                a
-                digital-first mindset.</p>
-
-            <h3>Where We&rsquo;re Going</h3>
-            <p>We&rsquo;re not just an audit firm – we&rsquo;re reimagining the way audits are done. This includes
-                <strong>GApp™</strong>
-                (our upcoming coordination platform) and <strong>AuditorU™</strong> (our training arm to raise the
-                global
-                standard of auditors).
-            </p>
-
-            <h3>Our Values</h3>
-            <div class="values-grid" aria-label="Our values">
-                <div class="value-card">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                    <h4>Trust</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-balance-scale" aria-hidden="true"></i>
-                    <h4>Accountability</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <h4>Excellence</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-leaf" aria-hidden="true"></i>
-                    <h4>Sustainability</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                    <h4>Service</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <h4>Synergy</h4>
-                </div>
-                <div class="value-card">
-                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-                    <h4>Innovation</h4>
-                </div>
-            </div>
-
-            <div style="margin-top: 40px;">
-                <a href="#" class="cta-button primary">Contact Us</a>
-            </div>
-        </section>
+        <!-- About content moved to about.html -->
 
     </main>
 
@@ -474,6 +308,80 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                 clearBtn.addEventListener('click', () => form.reset());
             }
         });
+    </script>
+
+    <script>
+        // Modal: open/close and basic focus management
+        (function () {
+            const openBtn = document.getElementById('openRequestModal');
+            const modal = document.getElementById('requestModal');
+            const overlay = modal ? modal.querySelector('.modal-overlay') : null;
+            const closeBtn = modal ? modal.querySelector('.modal-close') : null;
+            const firstFocusable = modal ? modal.querySelector('input, select, textarea, button') : null;
+            let lastFocused = null;
+
+            function openModal() {
+                if (!modal) return;
+                lastFocused = document.activeElement;
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                if (firstFocusable) firstFocusable.focus();
+                trapFocus(modal);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                releaseFocusTrap();
+                if (lastFocused) lastFocused.focus();
+            }
+
+            if (openBtn) openBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (overlay) overlay.addEventListener('click', closeModal);
+
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal && modal.getAttribute('aria-hidden') === 'false') {
+                    closeModal();
+                }
+            });
+
+            // Simple focus trap
+            let focusableNodes = [];
+            let focusTrapHandler = null;
+
+            function trapFocus(container) {
+                focusableNodes = Array.from(container.querySelectorAll('a[href], button, textarea, input, select')).filter(n => !n.hasAttribute('disabled'));
+                if (focusableNodes.length === 0) return;
+                const first = focusableNodes[0];
+                const last = focusableNodes[focusableNodes.length - 1];
+
+                focusTrapHandler = function (e) {
+                    if (e.key !== 'Tab') return;
+                    if (e.shiftKey) {
+                        if (document.activeElement === first) {
+                            e.preventDefault();
+                            last.focus();
+                        }
+                    } else {
+                        if (document.activeElement === last) {
+                            e.preventDefault();
+                            first.focus();
+                        }
+                    }
+                };
+
+                document.addEventListener('keydown', focusTrapHandler);
+            }
+
+            function releaseFocusTrap() {
+                if (focusTrapHandler) document.removeEventListener('keydown', focusTrapHandler);
+                focusTrapHandler = null;
+                focusableNodes = [];
+            }
+        })();
     </script>
 
 </body>

@@ -1,7 +1,7 @@
 /* CSS to match Mock Up.jpeg and design cues */
 :root {
     /* Dark theme variables */
-    --color-off-white: #0a0a0a;
+    --color-off-white: #2c3e50;
     /* dark section background */
     --color-charcoal: #e6e6e6;
     /* light-gray text for secondary elements */
@@ -32,7 +32,7 @@ body {
     font-family: var(--font-stack);
     color: var(--color-graphite);
     margin: 0;
-    background-color: #000000;
+    background-color: #2c3e50;
     /* dark page background */
     /* Base background */
     line-height: 1.6;
@@ -82,7 +82,7 @@ p {
 
 /* --- Header/Navigation --- */
 header {
-    background-color: #000000;
+    background-color: #2c3e50;
     /* keep header dark */
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     position: sticky;
@@ -173,7 +173,7 @@ header {
     width: auto;
     height: auto;
     left: 0;
-    background: #000;
+    background: #2c3e50;
     color: #fff;
     padding: 8px 12px;
     z-index: 10000;
@@ -261,6 +261,50 @@ header {
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+/* Hero background for the home section */
+#home.section {
+    /* Background image - replace images/hero.jpg with your preferred hero image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    min-height: 560px;
+    display: flex;
+    /* left-align hero content on wider screens */
+    align-items: flex-start;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* Constrain hero text width and center content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: 0;
+}
+
+#home.section .sub-headline {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 900px) {
+    #home.section {
+        min-height: 420px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-position: center 30%;
+    }
+
+    .hero-content {
+        padding-left: 6px;
+        padding-right: 6px;
+        text-align: center;
+    }
 }
 
 #home .headline {
@@ -831,4 +875,67 @@ footer a:focus {
 
 #contact .contact-quick li {
     color: rgba(11, 11, 11, 0.9) !important;
+}
+
+/* Modal styles for Request an Audit */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.modal[aria-hidden="false"] {
+    display: block;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog {
+    position: relative;
+    max-width: 720px;
+    margin: 60px auto;
+    background: #ffffff;
+    color: #0b0b0b;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(2, 6, 23, 0.6);
+    z-index: 10001;
+    overflow: hidden;
+}
+
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #0b0b0b;
+    padding: 6px 10px;
+}
+
+.modal-body {
+    padding: 28px;
+}
+
+/* Make inputs dark-on-white inside modal */
+.modal .contact-form input[type="text"],
+.modal .contact-form input[type="email"],
+.modal .contact-form select,
+.modal .contact-form textarea {
+    background: #ffffff;
+    color: #0b0b0b;
+    border: 1px solid #dfe6eb;
+}
+
+@media (max-width: 700px) {
+    .modal-dialog {
+        margin: 20px;
+    }
 }
