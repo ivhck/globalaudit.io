@@ -107,7 +107,6 @@ header {
     font-weight: 700;
     font-size: 18px;
     color: var(--color-graphite);
-    text-decoration: none;
 }
 
 .logo img {
@@ -115,6 +114,7 @@ header {
     max-height: 70px;
     /* adjust as needed for your logo file */
     width: auto;
+    margin-bottom: 16px;
 }
 
 .nav-links {
@@ -511,6 +511,99 @@ header {
     color: var(--color-charcoal);
 }
 
+/* Key metrics / trust indicators styles */
+.key-metrics__inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 0 6px;
+}
+
+.key-metrics__img-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.key-metrics__title h4 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.metrics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.metrics__item {
+    text-align: center;
+}
+
+.metrics__total {
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--color-accent-blue);
+    line-height: 1;
+    transform-origin: center center;
+    opacity: 0;
+    transform: translateY(8px) scale(.98);
+    animation: km-pop 640ms cubic-bezier(.2, .9, .2, 1) forwards;
+}
+
+@keyframes km-pop {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* stagger delays */
+.metrics__item:nth-child(1) .metrics__total {
+    animation-delay: 120ms;
+}
+
+.metrics__item:nth-child(2) .metrics__total {
+    animation-delay: 260ms;
+}
+
+.metrics__item:nth-child(3) .metrics__total {
+    animation-delay: 400ms;
+}
+
+.metrics__label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+    .key-metrics__inner-container {
+        text-align: center;
+    }
+
+    .metrics {
+        flex-direction: column;
+    }
+
+    .metrics__item {
+        padding: 12px 0;
+    }
+}
+
 /* --- GAppTM and AuditorUTM Sections (Look like the Mock Up) --- */
 .promo-section {
     padding: 60px 0;
@@ -564,12 +657,97 @@ header {
     top: 0;
 }
 
+/* Footer subscription area (above the main footer) */
+.footer__wrapper {
+    padding: 28px 0 8px;
+}
+
+.footer__subscription {
+    /* keep subscription visually connected to the dark page background */
+    background: transparent;
+}
+
+.footer__subscription-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 20px;
+}
+
+.footer__subscription-content {
+    max-width: 720px;
+}
+
+.footer__subscription-title {
+    font-size: 20px;
+    margin: 0 0 6px;
+    color: #ffffff;
+}
+
+.footer__subscription-description {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+}
+
+.footer__subscribe-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.footer__subscribe-form input[type="email"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    min-width: 220px;
+}
+
+.footer__subscribe-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__subscribe-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.12);
+}
+
+
+
+@media (max-width: 900px) {
+    .footer__subscription-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .footer__subscribe-form {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer__subscribe-form input[type="email"] {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .footer__subscribe-form button {
+        width: 100%;
+    }
+}
+
 /* --- Footer --- */
 /* --- Footer --- */
 footer {
     background-color: var(--color-accent-blue);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 60px 20px 20px;
+    padding: 40px 20px 16px;
+    /* tightened vertical padding for a more compact footer */
     color: white;
 }
 
@@ -591,7 +769,8 @@ footer a:hover {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 8px;
+    /* more compact column gap */
     margin-bottom: 40px;
 }
 
@@ -668,15 +847,16 @@ footer a:focus {
 .footer-widget .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 30px;
+    gap: 8px;
+    margin-bottom: 20px;
+    /* reduced vertical spacing between rows */
 }
 
 .footer-widget .col.footer--widget h4 {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 150px;
     color: white;
 }
 

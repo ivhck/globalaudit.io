@@ -59,7 +59,35 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                 </div>
             </div>
         </section>
+        <!-- Key metrics / trust indicators -->
+        <section class="key-metrics section">
+            <div class="container key-metrics__inner-container">
 
+
+
+
+                <div class="key-metrics__metrics">
+                    <ul class="metrics metrics--3-col">
+
+                        <li class="metrics__item">
+                            <div class="metrics__total">2010</div>
+                            <div class="metrics__label">Started Operations&nbsp;</div>
+                        </li>
+
+                        <li class="metrics__item">
+                            <div class="metrics__total">5</div>
+                            <div class="metrics__label">Countries</div>
+                        </li>
+
+                        <li class="metrics__item">
+                            <div class="metrics__total">1500+</div>
+                            <div class="metrics__label">Audits</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
         <!-- Services moved to services.html -->
 
         <!-- CONTACT / REQUEST AUDIT modal (form moved into modal) -->
@@ -132,7 +160,30 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
         <!-- Auditors content moved to auditors.html -->
 
         <!-- About content moved to about.html -->
-
+        <div class="footer__wrapper">
+            <section class="footer__subscription">
+                <div class="footer__subscription-wrapper">
+                    <div class="footer__subscription-main">
+                        <div class="footer__subscription-content">
+                            <h2 class="footer__subscription-title">Subscribe here:</h2>
+                            <p class="footer__subscription-description">
+                                Enter your email address to have the latest GLobal Audir insights and developments
+                                delivered directly to you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__subscribe-container">
+                        <form class="footer__subscribe-form" action="#" method="post"
+                            aria-label="Subscribe to newsletter">
+                            <label for="subscribe-email" class="visually-hidden">Email address</label>
+                            <input id="subscribe-email" type="email" name="email" placeholder="Enter your email"
+                                required />
+                            <button type="submit" class="cta-button primary">Subscribe</button>
+                        </form>
+                    </div> <!-- .footer__subscribe-container -->
+                </div> <!-- .footer__subscription-wrapper -->
+            </section> <!-- .footer__subscription -->
+        </div> <!-- .footer__wrapper -->
     </main>
 
     <!-- Footer #1
@@ -145,7 +196,7 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                 <div class="row clearfix">
                     <div class="col-12 col-md-6 col-lg-3 footer--widget widget-about">
                         <div class="widget-content">
-                            <img class="footer-logo" src="assets/images/logo/logo-small.png" alt="logo">
+                            <img class="footer-logo" src="images/logo-small.png" alt="logo">
                             <p>Global Audit delivers reliable, independent audits whenever and wherever you need
                                 them.
                                 Powered by technology. Built on trust. </p>
@@ -171,7 +222,7 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                         </div>
                     </div><!-- .col-md-2 end -->
 
-                    <div class="col-12 col-sm-4 col-md-6 col-lg-2 footer--widget widget-links">
+                    <div class="col-12 col-xs-4 col-md-6 col-lg-2 footer--widget widget-links">
                         <div class="widget-title">
                             <h5>Services</h5>
                         </div>
@@ -381,6 +432,58 @@ _  /   / /_/ // /_/ / _  / / /__ / /_/ /_  /_/_____/(__  )/ /_/ // /_/ // /_/ //
                 focusTrapHandler = null;
                 focusableNodes = [];
             }
+        })();
+    </script>
+
+    <script>
+        // Animate metric numbers when they enter the viewport (count-up for integer-like values)
+        (function () {
+            function formatNumber(n) {
+                return n.toLocaleString();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const items = document.querySelectorAll('.metrics__total');
+                if (!items || items.length === 0) return;
+
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        if (el.dataset.animated) { observer.unobserve(el); return; }
+                        el.dataset.animated = '1';
+                        const raw = el.textContent.trim();
+
+                        // If value looks like an integer (may include commas and a trailing +), animate count-up
+                        const matchInt = raw.match(/^[\d,]+\+?$/);
+                        if (matchInt) {
+                            const suffix = raw.endsWith('+') ? '+' : '';
+                            const digits = raw.replace(/[^\d]/g, '');
+                            const target = parseInt(digits || '0', 10);
+                            const duration = 1200;
+                            let start = null;
+
+                            function step(ts) {
+                                if (!start) start = ts;
+                                const progress = Math.min((ts - start) / duration, 1);
+                                const current = Math.floor(progress * target);
+                                el.textContent = formatNumber(current) + suffix;
+                                if (progress < 1) requestAnimationFrame(step);
+                                else el.textContent = formatNumber(target) + suffix;
+                            }
+
+                            requestAnimationFrame(step);
+                        } else {
+                            // For non-integer formats (e.g. "1.1M") we just ensure the CSS pop-in is visible
+                            el.style.opacity = '';
+                        }
+
+                        observer.unobserve(el);
+                    });
+                }, { threshold: 0.25 });
+
+                items.forEach(i => io.observe(i));
+            });
         })();
     </script>
 
